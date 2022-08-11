@@ -18,7 +18,7 @@ repeat(10)
 function repeat1(n) {
     for (var i = 0; i< n; i++) {
         // i가 홀수 일때만 출력한다.
-        if (i % 2) console.log(i);
+        if (i % 2) console.log(i)
     }
 }
 
