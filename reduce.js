@@ -39,4 +39,4 @@ const count = fruits.reduce((acc, cur) => {
   return acc;
 }, {});
 
-console.log(count);
+console.log(count); // {banana: 1, apple: 2, orange: 2}
