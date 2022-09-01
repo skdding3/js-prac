@@ -26,3 +26,16 @@ a.forEach(function (v, i, b) {
 });
 console.log(a);
 // [ 1, 4, 9, 16, 25 ] 각 배열 요소의 제곱
+
+
+
+// Jquery 사용시 method 해당 부분은 리스트가 뿌려진 반복되는 input에서 조건을 돌려준다.
+$("input[name=waitpop_submit]").each(function () {
+  var rdate = $(this).attr("rdate");
+  var rtime = $(this).attr("rtime");
+  var rdatetime = rdate + " " + rtime;
+  //console.log(rdatetime);
+  if (rdatetime == waitData) {
+    $(this).hide();
+  }
+});
