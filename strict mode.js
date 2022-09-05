@@ -113,3 +113,7 @@ foo();
     // 변경된 인수가 arguments 객체에 반영되지 않는다.
     console.log(arguments); // { 0: 1, length: 1}
 });
+
+
+// ----
+
