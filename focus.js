@@ -21,3 +21,15 @@ $(function () {
             alert('5분 후 재측정 해주세요')
         }
     })
+
+    // like blur
+
+
+    // // focusin
+
+    $('#focus').on("focusin", function (e){ // 아이디가 "focus"인 요소에 focusin 이벤트를 설정함.
+        $(this).css('backgroundColor', 'yellow');
+    });
+
+    // like focus
+});
