@@ -28,7 +28,7 @@ function outer() { // ** 지역 변수
 outer();
 
 console.log(x); // 7. global x
-console.log(y); // 8. ReferenceError: z is not defined
+console.log(z); // 8. ReferenceError: z is not defined
 
 
 // scope chain
