@@ -16,3 +16,14 @@ var day = ('0' + date.getDate()).slice(-2); // 14
 var dateString = year + '-' + month  + '-' + day;
 // 2022-09-14
 
+
+const getDataDiff = (day1, day2) => {
+    var date1 = new Date(day1);
+    var date2 = new Date(day2);
+
+    var diffDate = date1.getTime() - date2.getTime()
+    return Math.abs(diffDate/ (1000 * 60 * 60 * 24)) // ms * sec * min * hour = day
+}
+
+console.log(getDataDiff("2022-09-01", "2022-09-14") + '일');
+// 13일
