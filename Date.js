@@ -17,6 +17,7 @@ var dateString = year + '-' + month  + '-' + day;
 // 2022-09-14
 
 
+
 const getDataDiff = (day1, day2) => {
     var date1 = new Date(day1);
     var date2 = new Date(day2);
@@ -27,3 +28,11 @@ const getDataDiff = (day1, day2) => {
 
 console.log(getDataDiff("2022-09-01", "2022-09-14") + '일');
 // 13일
+
+dateISO = date.toISOString()
+
+console.log(dateISO);
+// 2022-09-14T22:57:34.675Z
+
+console.log(dateISO.slice(0, 10));
+console.log(dateISO.slice(0, 10).replace(/-/g,''));
