@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 // 비구조화 할당
 // const MyComponent = props => {
 // const { name, children } = props;
