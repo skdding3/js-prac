@@ -25,3 +25,20 @@ $('request').click(function () {
     }
   })
 })
+
+
+// ajax (form data)
+
+var formData = ("#sms_send").serialize();
+// 데이터를 직렬화 해서 post 해준다.
+
+
+$.ajax({
+  url: "/mng/sms/sendsms",
+  data: formData,
+  type:"POST",
+}).done(function (data) {
+  alert("문자가 전송되었습니다.");
+}).fail(function(data){
+  alert("전송에 실패하였습니다. 다음에 다시 시도해주십시요.");
+});
