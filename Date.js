@@ -36,3 +36,11 @@ console.log(dateISO);
 
 console.log(dateISO.slice(0, 10));
 console.log(dateISO.slice(0, 10).replace(/-/g,''));
+
+
+// 오늘 날짜 맞추기 (한국시간)
+var date = new Date()
+const offset = new Date().getTimezoneOffset() * 60000;
+const today = new Date(Date.now() - offset);
+dateISO = today.toISOString()
+dateISO = dateISO.slice(0, 10)
