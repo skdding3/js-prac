@@ -23,3 +23,10 @@ function pow2 (x, n) {
 }
 
 console.log(pow2(2, 3)) // 8
+
+// if 대신 조건부 연산자 ?를 사용한다.
+function pow3 (x, n) {
+    return (n == 1) ? x : (x * pow3(x, n - 1));
+}
+
+console.log(pow3)
