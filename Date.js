@@ -44,3 +44,15 @@ const offset = new Date().getTimezoneOffset() * 60000;
 const today = new Date(Date.now() - offset);
 dateISO = today.toISOString()
 dateISO = dateISO.slice(0, 10)
+
+
+
+// 생년월일 계산 로직
+var today = new Date()
+var thisYear = today.getFullYear()
+$('#birthDay').focusout(function () {
+    var birth = thisYear - parseInt(19 + $(this).val().substring(0, 2));
+    if (birth <= 60) {
+        alert('60세 이상부터 신청 가능합니다.')
+    }
+})
