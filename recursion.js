@@ -58,3 +58,42 @@ function sumSalaries(department) {
 
 console.log(sumSalaries(company)); // 7700
 
+
+// 재귀적 구조 (recursion structure)
+
+
+
+// ex
+let list = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
+
+// recursion
+let list = { value: 1 };
+list.next = { value: 2 };
+list.next.next = { value: 3 };
+list.next.next.next = { value: 4 };
+list.next.next.next.next = null;
+
+let secondList = list.next.next;
+list.next.next = null; // 3 -> 4
+
+
+// 요소 추가
+let list = { value: 1 };
+list.next = { value: 2 };
+list.next.next = { value: 3 };
+list.next.next.next = { value: 4 };
+
+// list에 새로운 value를 추가한다.
+list = { value: "new item", next: list };
