@@ -18,3 +18,27 @@ switch (a) {
         console.log( "어떤 값인지 파악이 되지 않습니다." );
 }
 // 비교하려는 값과 일치합니다.
+
+
+// 여러 개의 "case" 문 묶기
+
+
+let b = 4;
+switch(b) {
+    case 4:
+        console.log('계산이 맞습니다.');
+        break;
+
+
+    case 3:
+    case 5:
+        console.log('계산이 틀립니다!');
+        console.log('수학을 다시 들어봅시다');
+
+
+    default:
+        console.log('오잉 이상하네요 계산이');
+}
+
+
+// case 3 과 5는 같은 결과를 보여준다.
