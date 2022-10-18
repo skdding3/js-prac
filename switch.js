@@ -42,3 +42,32 @@ switch(b) {
 
 
 // case 3 과 5는 같은 결과를 보여준다.
+
+
+
+// switch 문을 if 문으로 바꿔보기
+
+switch (browser) {
+    case 'Edge':
+        alert( "Edge를 사용하고 계시네요!" );
+        break;
+
+    case 'Chrome':
+    case 'Firefox':
+    case 'Safari':
+    case 'Opera':
+        alert( '저희 서비스가 지원하는 브라우저를 사용하고 계시네요.' );
+        break;
+
+    default:
+        alert( '현재 페이지가 괜찮아 보이길 바랍니다!' );
+}
+
+// 풀이
+if (browser == 'Edge') {
+    alert("Edge를 사용하고 계시네요!")
+} else if (browser == 'Chrome' || browser == 'FireFox' || browser == 'Safari' || browser == 'Opera') {
+    alert('저희 서비스가 지원하는 브라우저를 사용하고 계시네요.')
+} else {
+    alert('현재 페이지가 괜찮아 보이길 바랍니다!')
+}
