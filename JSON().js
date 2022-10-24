@@ -38,3 +38,22 @@ $.ajax({
         console.log(result)
     }
 })
+
+
+// ajax 데이터 json에 적재하여 전송
+
+// 빈 객체 안에 빈 배열 생성
+const changeInput = {
+    questionList : [],
+    answerList: []
+}
+// input이 변화한 값 감지하여 push로 적재
+$("input").change(function(){
+    // 변화한 id값 가져오기
+    changeInput.questionList.push($(this).attr('id'))
+    changeInput.answerList.push($(this).val())
+});
+
+$('#submit').click(() => {
+    console.log(changeInput)
+})
