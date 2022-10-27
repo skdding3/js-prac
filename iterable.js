@@ -6,8 +6,12 @@ let range = {
     to: 5
 };
 
+
+// for..of 최초 호출 시, Symbol.iterator가 호출된다.
 range[Symbol.iterator] = function () {
 
+    // Symbol.iterator는 이터레이터 객체를 반환
+    // Separation of concern 관심사의 분리
     return {
         current: this.from,
         last: this.to,
