@@ -50,10 +50,59 @@ const changeInput = {
 // input이 변화한 값 감지하여 push로 적재
 $("input").change(function(){
     // 변화한 id값 가져오기
-    changeInput.questionList.push($(this).attr('id'))
-    changeInput.answerList.push($(this).val())
+    // 질문 답변 구분해서 데이터 적재
+    if ($(this).attr('id').substring(26,27) == 'q') {
+        var push = {
+            questionSeq : $(this).attr('title'),
+            question : $(this).val()
+        }
+        changeInput.questionList.push(push)
+    } else if ($(this).attr('id').substring(26,27) == 'a') {
+        var push = {
+            answerSeq : $(this).attr('title'),
+            answer : $(this).val()
+        }
+        changeInput.answerList.push(push)
+    } else if ($(this).attr('id').substring(27,28) == 'q') {
+        var push = {
+            questionSeq : $(this).attr('title'),
+            question : $(this).val()
+        }
+        changeInput.questionList.push(push)
+    } else if ($(this).attr('id').substring(27,28) == 'a') {
+        var push = {
+            answerSeq : $(this).attr('title'),
+            answer : $(this).val()
+        }
+        changeInput.answerList.push(push)
+    }
 });
 
 $('#submit').click(() => {
     console.log(changeInput)
+})
+
+// ajax arrayList로 보내주기
+
+let surveyData = {
+    questionList: changeInput.questionList,
+    answerList: changeInput.answerList
+}
+
+
+// 백엔드에서 받아주는 방법에 따라 ajax 보내주는 형태가 달라질수있다.
+// @RequestBody로 받아주는 경우 다음과 같이 보내주면 JSON.array로 받아들일수 있다.
+
+
+$.ajax({
+    url: "/mng/system/survey/edit",
+    method: "POST",
+    data: JSON.stringify(surveyData), // string화 시켜준다.
+    contentType : "application/json; charset=utf-8", // type을 json 형태로 잡아준다.
+    success: function () {
+        window.location.href = '/mng/system/survey/basic'
+    },
+    fail: function () {
+        alert('fail')
+    }
 })
