@@ -42,3 +42,7 @@ $.ajax({
 }).fail(function(data){
   alert("전송에 실패하였습니다. 다음에 다시 시도해주십시요.");
 });
+
+
+// ajax 성능
+false
