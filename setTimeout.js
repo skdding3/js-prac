@@ -26,10 +26,11 @@
 
 // 면접 질문
 
-var name = 'Sunki';
-function showName(name) {
-    console.log(name)
-}
+console.log('1')
+console.log('2')
+console.log('3')
+setTimeout(() => console.log('4'), 0)
+console.log('5')
+console.log('6')
 
-setTimeout(showName,1000,'Sunki')
-console.log(name)
+// 1, 2, 3, 5, 6, 4
