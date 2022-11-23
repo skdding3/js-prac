@@ -109,3 +109,8 @@ function printTodo2({ content, completed }) {
 }
 printTodo2({ id: 1, content: '블로깅', completed: false})
 // 오늘 블로깅은 진행중 상태입니다.
+
+
+const fruits = ['Apple', 'Banana', 'Cherry']
+const [a, b, c, d] = fruits
+console.log(fruits)
