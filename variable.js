@@ -89,5 +89,31 @@ console.log(work) // ing
 
 // let 호이스팅
 
-console.log(coffee) // ReferenceError: Cannot access 'coffee' before initialization
+// console.log(coffee) // ReferenceError: Cannot access 'coffee' before initialization
 let coffee = 'starbucks'
+
+/**
+ * const
+ * @type {string}
+ */
+
+const meal = 'bob'
+// meal = 'ramen' // TypeError: Assignment to constant variable.
+// const meal = 'kimchi'// SyntaxError: Identifier 'meal' has already been declared
+
+// 속성 변경
+
+const dinner = {
+    bob: '햇반',
+    banchan: '스팸'
+}
+
+dinner.banchan = '김치찌개'
+
+console.log(dinner) // { bob: '햇반', banchan: '김치찌개' }
+
+
+// 호이스팅
+
+console.log(noodle) // ReferenceError: Cannot access 'noodle' before initialization
+const noodle = '소면'
