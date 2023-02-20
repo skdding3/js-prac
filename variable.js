@@ -16,8 +16,9 @@
 // console.log(gender) // SyntaxError: Missing initializer in const declaration
 
 
-/*
- var
+/**
+ * var
+ * @type {string}
  */
 
 var sayHi = 'Hi Sunki'
@@ -43,11 +44,50 @@ var sunki = '내 이름'
 
 // var 호이스팅 문제점
 
-var name = 'Sunki'
-var age = '31'
+// var name = 'Sunki'
+// var age = 31
+//
+// if (age > 30) {
+//     var name = '선기!'
+// }
+//
+// console.log(name) // 선기!
+
+
+/**
+ * let
+ * @type {string}
+ */
+
+let age = 31
 
 if (age > 30) {
-    var name = '선기!'
+    let name = '선기!'
+    console.log(name) // 선기!
 }
 
-console.log(name) // 선기!
+// console.log(name) // ReferenceError: name is not defined
+
+
+// 재선언 불가
+
+let male = 'Man'
+// let male = 'M' // SyntaxError: Identifier 'male' has already been declared
+male = 'M'
+console.log(male) // M
+
+// 범위 차이 동작
+let work = 'ing'
+let day = 31
+
+if (day > 30) {
+    let work = 'Done!'
+    console.log(work) // Done!
+}
+
+console.log(work) // ing
+
+// let 호이스팅
+
+console.log(coffee) // ReferenceError: Cannot access 'coffee' before initialization
+let coffee = 'starbucks'
