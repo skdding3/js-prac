@@ -37,3 +37,34 @@ const add3 = makeAdder(3);
 
 // 익명함수 렉시컬 환경
 console.log(add3(2)); // 5
+
+
+
+const log = console.log;
+//
+// let y = 100;
+// function fn() {
+//     let x = 10;
+//     log(x, y)
+// }
+//
+// fn()
+
+// lexical env
+// 실행 환경기록
+// 바깥쪽 외부 참조 정보
+
+function outer() {
+    let x = 10;
+    function inner () {
+        log(x)
+    }
+    return inner
+}
+
+const fn = outer()
+
+fn()
+
+
+// 데이터 은닉
