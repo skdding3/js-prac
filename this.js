@@ -12,6 +12,16 @@ const sunki = new Sunki();
 
 console.log(sunki); // Sunki { name: 'Sunki' }
 
+
+function MyFn() {
+    this.title = 'Hello World!';
+    return this;
+}
+// new 연산자를 이용해서 새로운 객체를 얻는다.
+const myfn = new MyFn();
+myfn // MyFn {title: 'Hello World!'}
+
+
 // Object
 
 const climb = {
