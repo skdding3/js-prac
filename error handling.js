@@ -24,3 +24,14 @@ try {
     console.log("JSON.Error: " + e.message); // JSON.Error: 불완전 데이터 : 이름 없음
 }
 
+
+
+try {
+    alert( 'try 블록 시작' );
+    if (confirm('에러를 만드시겠습니까?')) 이상한_코드();
+} catch (e) {
+    alert( 'catch' );
+} finally {
+    alert( 'finally' );
+}
+
