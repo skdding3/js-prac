@@ -35,18 +35,33 @@ test() // before  -> after
 // test2() // before --> done! --> after
 
 
-function sleep3(ms) {
+// function sleep3(ms) {
+//     return new Promise((res) => setTimeout(res, ms))
+// }
+//
+// function test3() {
+//     console.log('before')
+//     sleep3(2000)
+//         .then(() => console.log('after'))
+//         .then(() => console.log('done!'))
+// }
+//
+// console.log('-- 비동기 지연 수정 --')
+// test3() // before -> after -> done
+
+
+// 비동기 지연 async await
+
+function sleep4 (ms) {
     return new Promise((res) => setTimeout(res, ms))
 }
 
-function test3() {
+async function test4() {
     console.log('before')
-    sleep3(2000)
-        .then(() => console.log('after'))
-        .then(() => console.log('done!'))
+    await sleep4(4000)
+    console.log('after')
 }
 
-console.log('-- 비동기 지연 수정 --')
-test3() // before -> after -> done
-
-
+console.log('-- 비동기 지연 async/await --')
+test4()
+console.log('done!')
